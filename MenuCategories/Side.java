@@ -18,7 +18,7 @@ public class Side {
 		sideMenu.put("Large Fry", 2.75);
 		sideMenu.put("Small Fruit Cup", 2.99);
 		sideMenu.put("Medium Fruit Cup", 3.95);
-		sideMenu.put("sideMenu Salad", 3.95);
+		sideMenu.put("Side Salad", 3.95);
 		sideMenu.put("Small Mac and Cheese", 3.15);
 		sideMenu.put("Medium Mac and Cheese", 3.95);
 		sideMenu.put("Cup Chicken Noodle Soup", 3.75);

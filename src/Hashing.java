@@ -37,7 +37,7 @@ public class Hashing extends Driver {
 		int i = hash(KEY);
 		while (name[i] != null) {
 			if (name[i].equals(KEY))
-				return name[i];
+				return price[i].toString();
 			i = (i + 1) % maxSize;
 		}
 		return null;
@@ -58,9 +58,8 @@ public class Hashing extends Driver {
 	 * @param name
 	 * @param price
 	 */
-	@SuppressWarnings("unlikely-arg-type")
 	public void insert(String KEY, Double value) {
-		int add = hash(name);
+		int add = hash(KEY);
 		int i = add;
 
 		do {
@@ -70,8 +69,7 @@ public class Hashing extends Driver {
 				curSize++;
 				return;
 			} // end if
-			if (name[i].equals(name)) {
-				// this 'name' has a problem w it
+			if (name[i].equals(KEY)) {
 				price[i] = value;
 				return;
 			} // end if
@@ -80,30 +78,22 @@ public class Hashing extends Driver {
 		while (i != add);
 	}// end insert
 
-	private int hash(String[] name2) {
-		return 0;
-	}
-
 	/**
 	 * remove item from table
 	 * 
 	 * @param name
 	 */
 	public void remove(String KEY) {
-		if (!conatins(name))
+		if (!conatins(KEY))
 			return;
 		int i = hash(KEY);
 		while (!KEY.equals(name[i]))
 			i = (i + 1) % maxSize;
-		Double.parseDouble(null);
-		// name[i] = price[i] = null;
+		name[i] = null;
+		price[i] = null;
 
 		curSize--;
 	}// end remove
-
-	private boolean conatins(String[] name2) {
-		return false;
-	}
 
 	/**
 	 * Returns name if in table
